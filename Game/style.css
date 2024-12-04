@@ -1,0 +1,101 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #e2ed07, #379203);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+/* Header Styling */
+h1 {
+  font-size: 2.5rem;
+  color: #6a11cb;
+  background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.choice {
+  font-size: 2rem;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.choice:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Result Section */
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f3f3f3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#result-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+strong {
+  color: #2575fc;
+}
+
+/* Scores */
+span {
+  font-size: 1.4rem;
+  color: #6a11cb;
+}
+
+/* Animations */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.choice:active {
+  animation: pop 0.3s;
+}
+@media (max-width: 768px) {
+  .choices {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
